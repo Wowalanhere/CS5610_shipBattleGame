@@ -1,0 +1,39 @@
+#square{
+    height: 30px;
+    width: 30px;
+    /* background-color: rgb(46, 125, 194); */
+    border: rgba(0, 0, 255, 0.363) 1px;
+    margin: 3px;
+    padding: 0.1px;
+
+
+    justify-items: center;
+}
+
+#square:hover{
+    background-color: rgba(194, 201, 187, 0.76);
+}
+
+
+.exist{
+    background-color: crimson;
+    color: transparent;
+}
+
+.nexist{
+    background-color: rgb(46, 125, 194);
+}
+
+.hit{
+    background-color: crimson;
+}
+
+.origin{
+    background-color: rgb(46, 125, 194);
+    
+}
+
+.miss{
+    background-color: rgba(194, 201, 187, 0.76);
+    
+}

@@ -1,0 +1,7 @@
+.enemyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 33px);
+    grid-template-rows: repeat(10, 33px);
+    margin-left: 40px;
+    margin-right: 40px;
+}
