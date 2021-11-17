@@ -3,6 +3,6 @@ import enemyReducer from "./enemygameReducer";
 import gameReducer from "./gameReducer";
 
 export default combineReducers({
-    game: gameReducer,
-    enemy: enemyReducer
+  game: gameReducer,
+  enemy: enemyReducer,
 });

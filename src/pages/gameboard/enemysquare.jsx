@@ -1,6 +1,6 @@
-import React from "react"
-import { useDispatch } from "react-redux"
-import './enemysquare.css'
+import React from "react";
+import { useDispatch } from "react-redux";
+import "./enemysquare.css";
 
 /**
  * the logic is:
@@ -11,41 +11,34 @@ import './enemysquare.css'
  * 5. if we click a non-empty square, turns to red color and show "X"
  */
 
+export function EnemySquare(props) {
+  const dispatch = useDispatch();
+  const dispatchturn = useDispatch();
 
+  const symbol = props.symbol;
+  let backGroundColor = "origin";
+  if (symbol === "x") {
+    backGroundColor = "hit";
+  } else if (symbol === "O") {
+    backGroundColor = "miss";
+  }
 
-export function EnemySquare(props){
-
-    const dispatch = useDispatch();
-    const dispatchturn = useDispatch();
-
-    const symbol = props.symbol;
-    let backGroundColor = 'origin';
-    if (symbol === 'x'){
-        backGroundColor = 'hit';
-    }
-    else if (symbol === 'O'){
-        backGroundColor = 'miss';
-    }
-
-
-
-    return(
-        <div onClick={() => {
-            dispatch({
-                type:"Click",
-                x: props.x,
-                y: props.y
-            })
-            dispatchturn({
-                type:"EnemyTurn"
-            })
-        }} 
-        id = "square" 
-        className = {backGroundColor}>
-
-            {props.symbol}
-
-        </div>
-    )
-
+  return (
+    <div
+      onClick={() => {
+        dispatch({
+          type: "Click",
+          x: props.x,
+          y: props.y,
+        });
+        dispatchturn({
+          type: "EnemyTurn",
+        });
+      }}
+      id="square"
+      className={backGroundColor}
+    >
+      {props.symbol}
+    </div>
+  );
 }
