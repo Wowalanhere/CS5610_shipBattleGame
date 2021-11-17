@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { EnemyBoard } from "./enemyboard";
 import { ResetButtom } from "./reset";
-import "./puregameboard.css";
 
 function whoIsWinner(enemyboard) {
   let enemyx = 0;
